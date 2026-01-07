@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card-validator {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  #card-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  #card-input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  #validate-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  #validate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .card-preview {
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .card-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.3;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .card-icon.active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .validation-result {
+    text-align: center;
+  }
+  
+  #card-system-display {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  #card-validity {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  #card-validity.valid {
+    color: #27ae60;
+    background-color: rgba(39, 174, 96, 0.1);
+  }
+  
+  #card-validity.invalid {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .examples {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .examples p {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .examples ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .examples li {
+    padding: 5px 0;
+    color: #7f8c8d;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .examples li:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 600px) {
+    .card-validator {
+      padding: 20px;
+    }
+    
+    .input-container {
+      flex-direction: column;
+    }
+    
+    #validate-btn {
+      padding: 15px;
+    }
+  }
